@@ -30,13 +30,13 @@ In `getAgeTemplate()`, the `<click-to-edit>` control is used and this causes the
 
 ```javascript
 getAgeTemplate() {
-      const template = "
+      const template = ``
 <span class='enhance-grid-item' data-id='#=data.id#'>
   <div>
     <input type='text' value.bind='age' />
   </div>
 </span>
-";
+``;
       return kendo.template(template);
     }
 ```
