@@ -23,16 +23,19 @@ Notice the ```<click-to-edit>``` component. Once the display value is clicked on
 
 ## app.ts
 This has properties for the columns and data of the ```<grid-view>``` to bind to.
+
 Both the name & age template have the a class of ```.enhance-grid-item``` and this is picked up in grid-view.ts to enhance with the templating engine.
+
 In ```getAgeTemplate()```, the ```<click-to-edit>``` control is used and this causes the stack space error in IE11. If the ```<click-to-edit>``` is replaced with a ```<div>``` as in the following snippet, it works fine.
+
 ```getAgeTemplate() {
-      const template = `
+      const template = "
 <span class='enhance-grid-item' data-id='#=data.id#'>
   <div>
     <input type='text' value.bind='age' />
   </div>
 </span>
-`;
+";
         return kendo.template(template);
     }```
 
