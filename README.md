@@ -12,7 +12,7 @@ Browse to http://localhost:9000 in Chrome and then IE.
 # Project Notes
 ##Running this project within IE11 causes an 'out of stack space' error. It works as intended in Chrome & FF.
 
-##grid-view-ts
+##grid-view.ts
 This is using a Kendo UI grid control and using the Templating Engine enhance method to enable 2-way binding between source data and a kendo cell template.
 
 ## click-to-edit.ts
