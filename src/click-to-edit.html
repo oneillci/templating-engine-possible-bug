@@ -1,0 +1,9 @@
+<template>
+  <div show.bind="!isEditing" click.trigger="toggleEditing()">
+      &nbsp;${displayValue}
+  </div>
+
+  <div show.bind="isEditing" ref="contentContainer">
+      <div if.bind="hasDisplayed" part="content-template"></div>
+  </div>
+</template>

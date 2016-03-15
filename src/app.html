@@ -1,0 +1,18 @@
+<template>
+  ${message}
+  
+  <click-to-edit display-value="some display value - click to edit">
+    <template replace-part='content-template'>
+      <input type='text' value='inner content control' />
+    </template>
+  </click-to-edit>
+  
+  <ul>
+    <li repeat.for="person of data">
+      ${person.name}, ${person.age}, ${person.active}
+    </li>
+    
+  </ul>
+  
+  <grid-view columns.bind='columns' source.bind='data'></grid-view>
+</template>
