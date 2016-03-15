@@ -9,10 +9,12 @@
   
   <ul>
     <li repeat.for="person of data">
-      ${person.name}, ${person.age}, ${person.active}
+        ${person.name}, ${person.age}, ${person.active}
+        <div innerHtml.bind="getTemplate(person.id)"></div>
+        <div innerHtml.bind="getClickToEditTemplate(person.id)"></div>
     </li>
     
   </ul>
   
-  <grid-view columns.bind='columns' source.bind='data'></grid-view>
+  <!--<grid-view columns.bind='columns' source.bind='data'></grid-view>-->
 </template>
